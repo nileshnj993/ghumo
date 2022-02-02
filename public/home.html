@@ -272,17 +272,21 @@ margin-bottom: 3.5%;
               var input, filter, city, images, image, i, txtValue;
               input = document.getElementById('myInput');
               filter = input.value.toUpperCase();
-              city = document.getElementsByClassName("image-container"); // ul is city
+              console.log(filter);
+              city = document.getElementById("image-container"); // ul is city
+  
               images = city.getElementsByTagName('div'); 
-            
+                console.log(images)
               // Loop through all list items, and hide those who don't match the search query
-              for (i = 0; i < images.length; i++) {
+              for (i = 0; i < images.length; i+=2) {
                 image = images[i].getElementsByTagName("img")[0];
-                txtValue = images[i].getElementsByTagName("div")[0];
+                console.log(image)
+                txtValue = images[i].getElementsByTagName("div")[0].innerHTML;
+              console.log(txtValue)
                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                  images[i].style.display = "";
+                  image.style.display = "block";
                 } else {
-                  images[i].style.display = "none";
+                  image.style.display = "none";
                 }
               }
             }
