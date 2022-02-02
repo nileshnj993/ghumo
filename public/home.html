@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ghumo</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+             body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   background-color: black;
+    }
+
+    .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: black;   
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:black;
+    text-decoration:none;
+    }
+    .flex-box-container-1 div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.flex-box-container-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+.flex-box-container-2 img{
+    box-shadow: 0px 10px 30px rgba(0,0,0,7);
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.content_img{
+ position: relative;
+    
+ float: left;
+ 
+}
+
+/* Child Text Container */
+.content_img div{
+ position: absolute;
+ bottom: 15%;
+ right: 5.5%;
+ background: black;
+ color: white;
+margin-bottom: 3.5%;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.content_img:hover{
+ cursor: pointer;
+}
+
+.content_img:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 1; 
+}
+
+        </style>
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5" style="margin-top: -1%;">
+                <a class="navbar-brand" href="/home"><img src="img/Ghumo-logos_transparent.png" width="40%" height="35%" style="margin-top: -2% !important; margin-left: 0% !important;"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto" style="margin-left: 35% !important;">
+                        <li class="nav-item"><a class="nav-link" style="color:black;" href="/upload"><b>Upload Itinerary</b></a></li>
+                        <li class="nav-item"><a class="nav-link" style="color:black;" href="/leaderboard"><b> View Leaderboard</b></a></li>
+                        <li class="nav-item"><a class="nav-link" style="color:black;" href="/myProfile"><b>My Profile</b></a></li>
+                        <li style="margin-top:2% !important;" class="nav-item"><a style="color:black;" class="nav-link" href="/login"><b>Logout</b></a></li>
+         
+                    
+                    </ul>
+                </div>
+                
+                  </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center" style="margin-top: 25%;">
+                    <div class="container h-100">
+                        <div class="d-flex justify-content-center h-100">
+                          <div class="searchbar">
+                            <input class="search_input" type="text" onkeyup="myFunction()" name="" placeholder="Search..." id="myInput">
+                            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                          </div>
+                          
+                        </div>
+                        <div class = "container-1">
+                            
+                            <div class = "flex-box-container-2" id="image-container" style="margin-top: 5%;">
+                                <div class="content_img" id="img-1">
+                                    <a href="/destination">
+                                    <img src="DATA/GOA/goa.jpg">
+                                    <div>Goa</div>
+                                    </a>
+                                </div>
+
+                                <div class="content_img" id="img-2">
+                                    <img src="DATA/GULMARG/gulmarg.jpg">
+                                    <div>Gulmarg</div>
+                                </div>
+
+                                <div class="content_img" id="img-3">
+                                    <img src="DATA/HAMPI/hampi.jpg">
+                                    <div>Hampi</div>
+                                </div>
+
+                                <div class="content_img" id="img-4">
+                                    <img src="DATA/MANALI/manali.jpg">
+                                    <div>Manali</div>
+                                </div>
+
+                                <div class="content_img" id="img-5">
+                                    <img src="DATA/OOTY/ooty.jpg">
+                                    <div>Ooty</div>
+                                </div>
+
+                                <div class="content_img" id="img-6">
+                                    <img src="DATA/UDAIPUR/udaipur.jpg">
+                                    <div>Udaipur</div>
+                                </div>
+
+                                
+                            </div>
+                            
+                      </div>
+                </div>
+            </div>
+        </header>
+  
+        
+        
+            
+        </section>
+        
+      <!--CONTACT US-->
+        <section class="contact-section bg-black" id="contact" style="margin-top: 20%;">
+
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Whitefield, Bangalore</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">contact@ghumo.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">+91 70601-11657</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="https://github.com/nileshnj993/ghumo" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5" style="margin-top: -3% !important;">Copyright &copy; Ghumo 2022</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            function myFunction() {
+              // Declare variables
+              var input, filter, city, images, image, i, txtValue;
+              input = document.getElementById('myInput');
+              filter = input.value.toUpperCase();
+              city = document.getElementsByClassName("image-container"); // ul is city
+              images = city.getElementsByTagName('div'); 
+            
+              // Loop through all list items, and hide those who don't match the search query
+              for (i = 0; i < images.length; i++) {
+                image = images[i].getElementsByTagName("img")[0];
+                txtValue = images[i].getElementsByTagName("div")[0];
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  images[i].style.display = "";
+                } else {
+                  images[i].style.display = "none";
+                }
+              }
+            }
+            </script>
+    </body>
+</html>

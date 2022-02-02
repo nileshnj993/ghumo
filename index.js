@@ -48,6 +48,29 @@ app.get("/signup",(req,res)=>{
     res.sendFile(path.join(__dirname,"public","register.html"));
 })
 
+app.get("/home",(req,res)=>{
+    res.sendFile(path.join(__dirname,"public","home.html"));
+})
+
+app.get("/leaderboard",(req,res)=>{
+    res.sendFile(path.join(__dirname,"public","leaderboard.html"));
+})
+
+app.get("/destination",(req,res)=>{
+    res.sendFile(path.join(__dirname,"public","destination.html"));
+})
+
+app.get("/publicProfile",(req,res)=>{
+    res.sendFile(path.join(__dirname,"public","publicProfile.html"));
+})
+
+app.get("/myProfile",(req,res)=>{
+    res.sendFile(path.join(__dirname,"public","myProfile.html"));
+})
+
+
+
+
 app.use(express.static(path.join(__dirname, "public")));
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));

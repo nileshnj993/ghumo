@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Leaderboard UI Design</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="<b>View</b>port">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">   
+	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>  
+	<style>
+		.btn-outline-success{
+			color: black;
+		}
+		a:link{
+			text-decoration: none;
+			
+		}
+		a:visited{
+			color: black;
+		}
+	</style>
+</head>
+<body style="background-color: #e4e4e4;">
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container px-4 px-lg-5" style="margin-top: -1%;">
+			<a class="navbar-brand" href="/home"><img src="img/Ghumo-logos_transparent.png" width="40%" height="30%" style= "margin-left: 0% !important;"></a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto" style="margin-left: 50% !important;">
+					<li class="nav-item"><a style="color:black;" class="nav-link" href="/upload"><b>Upload Itinerary</b></a></li>
+					<li class="nav-item"><a style="color:black;" class="nav-link" href="/myProfile"><b>My Profile</b></a></li>
+					<li style="margin-top:2% !important;" class="nav-item"><a style="color:black;" class="nav-link" href="/login"><b>Logout</b></a></li>
+	 
+				
+				</ul>
+			</div>
+			
+			  </div>
+		</div>
+	</nav>
+	<section class="main-content">
+		<div class="container">
+			<br>
+			<h1 style="text-align: center;">Top Travellers</h1>
+			<br>
+			<br>
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="leaderboard-card">
+						<div class="leaderboard-card__top">
+							<h3 class="text-center">1,051  <img src="img/coins.png" style="width: 10%;margin-bottom: 1%;"></h3>
+						</div>
+						<div class="leaderboard-card__body">
+							<div class="text-center">
+								<img src="img/user2.jpg" class="circle-img mb-2" alt="User Img">
+								<h5 class="mb-0">Sandeep Sandy</h5>
+								<p class="text-muted mb-0">@sandeep</p>
+								<hr>
+								<div class="d-flex justify-content-between align-items-center buttons">
+						
+									<button style="margin:auto;" class="btn btn-outline-success btn-sm"><b>View</b></b></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="leaderboard-card leaderboard-card--first">
+						<div class="leaderboard-card__top">
+							<h3 class="text-center">1,253 <img src="img/coins.png" style="width: 10%;margin-bottom: 1%;"></h3>
+						</div>
+						<div class="leaderboard-card__body">
+							<div class="text-center">
+								<img src="img/sudhanshu.jfif" class="circle-img mb-2" alt="User Img">
+								<h5 class="mb-0">Sudhanshu Nautiyal</h5>
+								<p class="text-muted mb-0">@sudhanshuwanderlust</p>
+								<hr>
+								<div class="d-flex justify-content-between align-items-center buttons">
+									
+									<button style="margin:auto;color: black; z-index: 1000;" class="btn btn-outline-success btn-sm"><a href="/publicProfile"><b>View</b></a></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="leaderboard-card">
+						<div class="leaderboard-card__top">
+							<h3 class="text-center">1,012 <img src="img/coins.png" style="width: 10%;margin-bottom: 1%;"></h3>
+						</div>
+						<div class="leaderboard-card__body">
+							<div class="text-center">
+								<img src="img/user3.jpg" class="circle-img mb-2" alt="User Img">
+								<h5 class="mb-0">John doe</h5>
+								<p class="text-muted mb-0">@johndoe</p>
+								<hr>
+								<div class="d-flex justify-content-between align-items-center buttons">
+					
+									<button style="margin:auto;" class="btn btn-outline-success btn-sm"><b>View</b></b></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br><br>
+			<h3 style="text-align: center;">All Users</h3>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th>User</th>
+						<th>Points</th>
+					
+						<th>Email</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/sudhanshu.jfif" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Sudhanshu Nautiyal</h5>
+									<p class="text-muted mb-0">@sudhanshuwanderlust</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,253</h4>
+							</div>
+						</td>
+						
+						<td>sudhanshu@gmail.com</td>
+						<td>
+							<button class="btn btn-success btn-sm"><a href="/publicProfile"><b>View</b></a></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user2.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Sandeep Sandy</h5>
+									<p class="text-muted mb-0">@sandeep</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,051</h4>
+							</div>
+						</td>
+						
+						<td>sandeep@sandeepmail.com</td>
+						<td>
+							<button class="btn btn-success btn-sm"><b>View</b></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user3.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">John Doe</h5>
+									<p class="text-muted mb-0">@johndoe</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,012</h4>
+							</div>
+						</td>
+				
+						<td>kiran@kiranmail.com</td>
+						<td>
+							<button class="btn btn-success btn-sm"><b>View</b></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user4.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">John Noakes</h5>
+									<p class="text-muted mb-0">@johnnoakes</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">986</h4>
+							</div>
+						</td>
+			
+						<td>kiran@kiranmail.com</td>
+						<td>
+							<button class="btn btn-success btn-sm"><b>View</b></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user5.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Tom harry</h5>
+									<p class="text-muted mb-0">@tomharry</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">951</h4>
+							</div>
+						</td>
+		
+						<td>kiran@kiranmail.com</td>
+						<td>
+							<button class="btn btn-success btn-sm"><b>View</b></button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<section class="contact-section bg-black" id="contact" style="margin-top: 20%;">
+
+		<div class="container px-4 px-lg-5">
+			<div class="row gx-4 gx-lg-5">
+				<div class="col-md-4 mb-3 mb-md-0">
+					<div class="card py-4 h-100">
+						<div class="card-body text-center">
+							<i class="fas fa-map-marked-alt text-primary mb-2"></i>
+							<h4 class="text-uppercase m-0">Address</h4>
+							<hr class="my-4 mx-auto" />
+							<div class="small text-black-50">Whitefield, Bangalore</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-3 mb-md-0">
+					<div class="card py-4 h-100">
+						<div class="card-body text-center">
+							<i class="fas fa-envelope text-primary mb-2"></i>
+							<h4 class="text-uppercase m-0">Email</h4>
+							<hr class="my-4 mx-auto" />
+							<div class="small text-black-50"><a href="#!">contact@ghumo.com</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-3 mb-md-0">
+					<div class="card py-4 h-100">
+						<div class="card-body text-center">
+							<i class="fas fa-mobile-alt text-primary mb-2"></i>
+							<h4 class="text-uppercase m-0">Phone</h4>
+							<hr class="my-4 mx-auto" />
+							<div class="small text-black-50">+91 70601-11657</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="social d-flex justify-content-center">
+				<a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+				<a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+				<a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+				<a class="mx-2" href="https://github.com/nileshnj993/ghumo" target="_blank"><i class="fab fa-github"></i></a>
+			</div>
+		</div>
+	</section>
+	<!-- Footer-->
+	<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5" style="margin-top: -3% !important;">Copyright &copy; Ghumo 2022</div></footer>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- * *                               SB Forms JS                               * *-->
+	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
