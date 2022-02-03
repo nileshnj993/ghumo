@@ -32,7 +32,7 @@
 			text-align: center;
 			border-radius: 10px;
 			margin-bottom: 20%;
-			margin-top: 1%;
+			margin-top: 0%;
 			box-shadow: 0px 5px 20px rgba(0,0,0,7);
 		}
 
@@ -116,10 +116,20 @@
 						<form action="/uploadItinerary" method="POST" enctype="multipart/form-data">
 							<label for="files" id="imagebtn" style="margin-top:20px;"><b>Upload Itinerary</b></label>
 							<hr>
-							<input type="text" id="dest" placeholder="Enter Destination..." class="form-control form-control-lg" style="margin-bottom:20px;margin-left: 35px; width:80%;" name="destination"> 
-							<input type="file" id="files" style="padding-bottom: 20px; padding-left: 40px;" name="itinerary"> 
+                            <label for="destination"></label>
+                            <select name="destination" id="dest" class="form-control form-control-lg" style="margin-bottom:20px;margin-left: 35px; width:80%;" required>
+                              <option value="" disabled selected>Choose Destination</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gulmarg">Gulmarg</option>
+                              <option value="Hampi">Hampi</option>
+                              <option value="Manali">Manali</option>
+                              <option value="Ooty">Ooty</option>
+                              <option value="Udaipur">Udaipur</option>
+                            </select>
+							<!-- <input type="text" id="dest" placeholder="Enter Destination..." class="form-control form-control-lg" style="margin-bottom:20px;margin-left: 35px; width:80%;" name="destination">  -->
+							<input type="file" id="files" style="padding-bottom: 20px; padding-left: 40px;" name="itinerary" required   > 
 							
-							<input type="submit" value="Create" class="btn btn-success btn-sm" style=" width: 100%;border-radius: 10px;font-weight: bold;" >
+							<input type="submit" value="Submit" class="btn btn-success btn-sm" style=" width: 100%;border-radius: 10px;font-weight: bold;" >
 						</form>
 					</div>
 
