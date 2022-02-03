@@ -25,7 +25,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage}).single('itinerary');
 
-mongoose.connect("mongodb+srv://team12:team12sabre@ghumo.fldxv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://team12:"+process.env.DB_PASSWORD+"@ghumo.fldxv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
