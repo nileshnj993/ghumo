@@ -2,7 +2,7 @@
 
 The problem statement was to develop an app that symbolizes travel in the future, and we chose to develop a solution that involved gamifying travel.
 
-When you open Amazon, you have the urge to buy something. But, when you open Redbus, you don't really have the urge to travel. This is where Ghumo comes into the picture and tries to create this urge to travel.
+When you open Amazon, you have the urge to buy something. But, when you open Redbus or MakeMyTrip, you don't really have the urge to travel. This is where Ghumo comes into the picture and tries to create this urge to travel.
 
 Ghumo is the travel buddy you always wished you had! It provides users with a unique chance to create their own travel plans based on the experiences shared by other Ghumo users. It simplifies the **planning** part, and helps focus only on the **travel** part.
 
