@@ -27,7 +27,7 @@ The leaderboard system ensures that quality itineraries are available to all use
 
 MongoDB Atlas was used for a cloud based database environment, and the entire project was dockerized and deployed on GCP.
 
-You can access the website at [Ghumo](https://ghumo-rjjg3allbq-el.a.run.app/)
+You can access the website at [Ghumo](https://ghumo-rjjg3allbq-el.a.run.app/) (No longer deployed)
 
 If the deployed application is unavailable/taken down, you can locally run the app following the below steps:
 
