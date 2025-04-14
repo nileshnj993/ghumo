@@ -27,9 +27,9 @@ The leaderboard system ensures that quality itineraries are available to all use
 
 MongoDB Atlas was used for a cloud based database environment, and the entire project was dockerized and deployed on GCP.
 
-You can access the website at [Ghumo](https://ghumo-rjjg3allbq-el.a.run.app/) (No longer deployed)
+The application was deployed on a GCP instance during the course of the bootcamp. It was taken down later to avoid extra costs.
 
-If the deployed application is unavailable/taken down, you can locally run the app following the below steps:
+Instead, you can locally run the app by following the below steps:
 
 1. Clone the git repository onto your local system. Ensure you have node and npm installed.
 2. Run the command `npm install` to download all the dependencies.
